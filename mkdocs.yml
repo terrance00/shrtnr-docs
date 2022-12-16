@@ -2,3 +2,7 @@ site_name: shrtnr-docs
 
 theme:
   name: material
+
+docs_dir: "./docs_src"
+
+site_dir: "./docs"
