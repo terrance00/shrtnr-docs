@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+# Introduction to shrtnr.io
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This site serves as the main center of documentation and architecture for shrtnr.io.
 
-## Commands
+## What is shrtnr.io?
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+In _short_, a URL shortening service geared towards helping you share your content in as little space as possible.
 
-## Project layout
+**Convert**
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+ `https://www.google.com/ads/a-very-very-very-long-url-with-parameters?id=12345&param1=a_long_parameters&param2=a_very_long_parameter`
+
+**Into**
+
+ `https://shrtnr.io/a0A`
