@@ -21,7 +21,12 @@ nav:
       - "Redirector": "./services/shrtnr-redirector.md"
       - "Shrtnr UI": "./services/shrtnr-ui.md"
       - "Shrtnr Analytics": "./services/shrtnr-analytics.md"
-  - "CD/CD":
+  - "SDLC":
+      - "Pull Requests": "./sdlc/pull-requests.md"
+      - "QA": "./sdlc/qa.md"
+      - "Bugs": "./sdlc/bugs.md"
+      - "Release Cycle": "./sdlc/release-cycle.md"
+  - "CI/CD":
       - "Branching Strategy": "./ci-cd/branching-strategy.md"
       - "Automation": "./ci-cd/automation.md"
 

@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#shrtnr-ui" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -372,10 +377,43 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Shrtnr UI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Shrtnr UI
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propposed-tech" class="md-nav__link">
+    Propposed Tech
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -419,14 +457,104 @@
       
       
         <label class="md-nav__link" for="__nav_5">
-          CD/CD
+          SDLC
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="CD/CD" data-md-level="1">
+      <nav class="md-nav" aria-label="SDLC" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          CD/CD
+          SDLC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/pull-requests/" class="md-nav__link">
+        Pull Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/qa/" class="md-nav__link">
+        QA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/bugs/" class="md-nav__link">
+        Bugs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/release-cycle/" class="md-nav__link">
+        Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          CI/CD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CI/CD" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          CI/CD
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -481,6 +609,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propposed-tech" class="md-nav__link">
+    Propposed Tech
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -500,9 +645,31 @@
   </a>
 
 
-  <h1>Shrtnr UI</h1>
-
-
+<h1 id="shrtnr-ui">Shrtnr UI</h1>
+<p>The UI component of the system will be the principle method for users to interact with the system.</p>
+<p>Users will register and be authenticated by the <a href="../shrtnr-oidc/">OIDC system</a>. From here they will be able to shorten their URLs and view analytics build from the <a href="../shrtnr-analytics/">analytics service</a>.</p>
+<h2 id="propposed-tech">Propposed Tech</h2>
+<p>A UX/UI designer can spec out the application.</p>
+<p>Using the modern <a href="https://m3.material.io/">material</a> design paradigm comes recommended.</p>
+<p>Being a web front end the following technologies will be useful:</p>
+<ul>
+<li>
+<p><a href="https://reactjs.org/docs/getting-started.html">React</a>:</p>
+<ul>
+<li>Very quick to bootstrap and hit the ground running</li>
+<li>Popular framework with lots of developers</li>
+<li>Can be set up to have useful tools like tests, typescript etc.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://angular.io/docs">Angular</a>:</p>
+<ul>
+<li>Comes full features out of the box and is ideal for enterprise scale development.</li>
+<li>Uses typescript natively and provides a lot more robust compilation safety.</li>
+<li>Has a heavier learning curve than most front-end frameworks.</li>
+</ul>
+</li>
+</ul>
 
 
 

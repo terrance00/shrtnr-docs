@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#shrtnr-api" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -330,10 +335,43 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         API
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposed-tech" class="md-nav__link">
+    Proposed Tech
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -419,14 +457,104 @@
       
       
         <label class="md-nav__link" for="__nav_5">
-          CD/CD
+          SDLC
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="CD/CD" data-md-level="1">
+      <nav class="md-nav" aria-label="SDLC" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          CD/CD
+          SDLC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/pull-requests/" class="md-nav__link">
+        Pull Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/qa/" class="md-nav__link">
+        QA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/bugs/" class="md-nav__link">
+        Bugs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/release-cycle/" class="md-nav__link">
+        Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          CI/CD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CI/CD" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          CI/CD
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -481,6 +609,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposed-tech" class="md-nav__link">
+    Proposed Tech
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -500,9 +645,25 @@
   </a>
 
 
-  <h1>API</h1>
-
-
+<h1 id="shrtnr-api">Shrtnr API</h1>
+<p>This API will be consumed mainly by the <a href="../shrtnr-ui/">UI</a> that has been created.</p>
+<p>However best practices should be kept in mind, and the API can be designed with <strong>RESTFull</strong> principles.</p>
+<p><em>In the event a browser extension or mobile application wants to consume this API, it will easily be able to do so.</em></p>
+<h2 id="proposed-tech">Proposed Tech</h2>
+<p>A Restfull webAPI can easily be implemented by the following technologies:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/">.Net</a><ul>
+<li>Very simple to bootstrap.</li>
+<li>Strongly typed.</li>
+<li>Latest versions are extremely performant.</li>
+</ul>
+</li>
+<li><a href="https://nodejs.org/en/docs/">NodeJS</a> will be perfectly suited to this task.<ul>
+<li>Many developers know <em>javascript</em>.</li>
+<li>Can have improved typing and stability by implementing <em>typescript</em>.</li>
+</ul>
+</li>
+</ul>
 
 
 

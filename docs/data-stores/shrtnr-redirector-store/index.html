@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#shrtnr-redirector-store" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -268,10 +273,43 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Shrtnr Redirector Store
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Shrtnr Redirector Store
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-mongo" class="md-nav__link">
+    Why Mongo?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -419,14 +457,104 @@
       
       
         <label class="md-nav__link" for="__nav_5">
-          CD/CD
+          SDLC
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="CD/CD" data-md-level="1">
+      <nav class="md-nav" aria-label="SDLC" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          CD/CD
+          SDLC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/pull-requests/" class="md-nav__link">
+        Pull Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/qa/" class="md-nav__link">
+        QA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/bugs/" class="md-nav__link">
+        Bugs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/release-cycle/" class="md-nav__link">
+        Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          CI/CD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CI/CD" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          CI/CD
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -481,6 +609,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-mongo" class="md-nav__link">
+    Why Mongo?
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -500,9 +645,20 @@
   </a>
 
 
-  <h1>Shrtnr Redirector Store</h1>
-
-
+<h1 id="shrtnr-redirector-store">Shrtnr Redirector Store</h1>
+<p>A very simple data store containing the indexed URL hash key and full URL.</p>
+<p>This data store will support the following service:</p>
+<ul>
+<li><a href="../../services/shrtnr-redirector/">Shrtnr Redirector</a></li>
+</ul>
+<h2 id="why-mongo">Why Mongo?</h2>
+<ul>
+<li>Mongo has a highly performant indexing capability.</li>
+<li>Mongo has the ability to use sharding to scale horizontally.</li>
+<li>Mongo as a document store is very simple to implement.</li>
+<li>Check out the docs <a href="https://www.mongodb.com/docs/">here</a>.</li>
+</ul>
+<p><img alt="mongodb" src="../../assets/mongodb.png" /></p>
 
 
 

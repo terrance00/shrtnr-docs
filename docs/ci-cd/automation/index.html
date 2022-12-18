@@ -403,6 +403,96 @@
 
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          SDLC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SDLC" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          SDLC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/pull-requests/" class="md-nav__link">
+        Pull Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/qa/" class="md-nav__link">
+        QA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/bugs/" class="md-nav__link">
+        Bugs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/release-cycle/" class="md-nav__link">
+        Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -410,20 +500,20 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_5">
-          CD/CD
+        <label class="md-nav__link" for="__nav_6">
+          CI/CD
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="CD/CD" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+      <nav class="md-nav" aria-label="CI/CD" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          CD/CD
+          CI/CD
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -483,13 +573,6 @@
         <li class="md-nav__item">
   <a href="#service-containerization" class="md-nav__link">
     Service containerization
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pull-request-flow" class="md-nav__link">
-    Pull request flow
   </a>
   
 </li>
@@ -557,13 +640,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pull-request-flow" class="md-nav__link">
-    Pull request flow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#deployments" class="md-nav__link">
     Deployments
   </a>
@@ -599,9 +675,14 @@
 
 <h1 id="automation">Automation</h1>
 <h2 id="service-containerization">Service containerization</h2>
-<h2 id="pull-request-flow">Pull request flow</h2>
+<p>Every service will have a docker file and upon successfull PR will be compiled and packaged into a docker container. The container registry of choice should be hosted on the relevant cloud server - <em>Azure container registry (ACR)</em> for our purposes.</p>
+<p>These will be versioned according to the versioning strategy below</p>
 <h2 id="deployments">Deployments</h2>
+<p>A <strong>k8s</strong> manifest will exist within a repo, for <em>development</em> and <em>master</em> branches. Deployments will occur automatically from these manifests.</p>
+<p>In addition all logic for deploying and maintaining load balancers and external data services will exist as deployment scripts on this repo in the form of <em>Azure pipelines</em>.</p>
 <h2 id="versioning">Versioning</h2>
+<p><strong>Semantic versioning</strong> wil be used. That is to say <code>x.y.z</code> where <code>x</code> is the major version (used for breaking changes), <code>y</code> is the feature version (used for new features) and <code>z</code> is the bug version, used for any hotfix or bug.</p>
+<p>For the <em>development environment</em>, all merged PR's will be built and deployed as the <em>next version</em> (AKA <code>x.y.x+1-{build-number}</code>) with the build number appended. With the build number appened all deployed versions will be easy to track back to a commit hash.</p>
 
 
 

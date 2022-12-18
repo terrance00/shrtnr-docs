@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#shrtnr-db" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -282,6 +287,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Shrtnr Db
@@ -419,14 +426,104 @@
       
       
         <label class="md-nav__link" for="__nav_5">
-          CD/CD
+          SDLC
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="CD/CD" data-md-level="1">
+      <nav class="md-nav" aria-label="SDLC" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          CD/CD
+          SDLC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/pull-requests/" class="md-nav__link">
+        Pull Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/qa/" class="md-nav__link">
+        QA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/bugs/" class="md-nav__link">
+        Bugs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdlc/release-cycle/" class="md-nav__link">
+        Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          CI/CD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CI/CD" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          CI/CD
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -481,6 +578,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -500,9 +599,21 @@
   </a>
 
 
-  <h1>Shrtnr Db</h1>
-
-
+<h1 id="shrtnr-db">Shrtnr DB</h1>
+<p>This will be the main <em>relational</em> database.</p>
+<p>This database will support the following services:</p>
+<ul>
+<li><a href="../../services/shrtnr-oidc/">OIDC</a><ul>
+<li>This is the identity service and will keep track of user identity.</li>
+<li>this service will use <strong>OpenIddict</strong> as the identity library. Check out the docs <a href="https://documentation.openiddict.com/guides/index.html">here</a>.</li>
+</ul>
+</li>
+<li><a href="../../services/shrtnr-analytics/">Analytics</a><ul>
+<li>This service keeps track of analytical data surrounding the redirect service.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="postgres" src="../../assets/postgresql.png" /></p>
 
 
 

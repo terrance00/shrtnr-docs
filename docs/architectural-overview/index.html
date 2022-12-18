@@ -496,14 +496,104 @@
       
       
         <label class="md-nav__link" for="__nav_5">
-          CD/CD
+          SDLC
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="CD/CD" data-md-level="1">
+      <nav class="md-nav" aria-label="SDLC" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          CD/CD
+          SDLC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/pull-requests/" class="md-nav__link">
+        Pull Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/qa/" class="md-nav__link">
+        QA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/bugs/" class="md-nav__link">
+        Bugs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/release-cycle/" class="md-nav__link">
+        Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          CI/CD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CI/CD" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          CI/CD
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -638,18 +728,18 @@
 <h1 id="architectural-overview">Architectural Overview</h1>
 <h3 id="services">Services</h3>
 <ul>
-<li><a href="../services/shrtnr-api/">shrtnr-api</a> - <em>.Net application</em></li>
-<li><a href="../services/shrtnr-oidc/">shrtnr-oidc</a> - <em>.Net application</em></li>
-<li><a href="../services/shrtnr-analytics/">shrtnr-analytics</a> - <em>.Net application</em></li>
-<li><a href="../services/shrtnr-ui/">shrtnr-ui</a> - <em>React application</em></li>
-<li><a href="../services/shrtnr-redirector/">shrtnr-redirector</a> - <em>.Net application</em></li>
+<li><a href="../services/shrtnr-api/">shrtnr-api</a></li>
+<li><a href="../services/shrtnr-oidc/">shrtnr-oidc</a></li>
+<li><a href="../services/shrtnr-analytics/">shrtnr-analytics</a></li>
+<li><a href="../services/shrtnr-ui/">shrtnr-ui</a></li>
+<li><a href="../services/shrtnr-redirector/">shrtnr-redirector</a></li>
 </ul>
 <h3 id="system">System</h3>
 <ul>
 <li>In short, the entire system will be deployed as a <strong>Kubernetes</strong> cluster (AKS), with load balancers for the public facing services.</li>
 <li>Our applications and services will be packaged as <strong>Docker</strong> images.</li>
 <li>In addition to the k8s system, we will have two data-stores.<ul>
-<li><a href="../data-stores/shrtnr-redirector-store/"><strong>MongoDB</strong></a> backing the redirector as a horizontally scaleable document store.</li>
+<li><a href="../data-stores/shrtnr-redirector-store/"><strong>MongoDB</strong></a> backing the redirector as a horizontally scalable document store.</li>
 <li><a href="../data-stores/shrtnr-db/"><strong>Postgres</strong></a> backing the API and OIDC service as a relational store.</li>
 </ul>
 </li>
