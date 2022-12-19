@@ -29,6 +29,7 @@ nav:
   - "CI/CD":
       - "Branching Strategy": "./ci-cd/branching-strategy.md"
       - "Automation": "./ci-cd/automation.md"
+  - "Tech Stack": "./tech-stack.md"
 
 markdown_extensions:
   - pymdownx.superfences:

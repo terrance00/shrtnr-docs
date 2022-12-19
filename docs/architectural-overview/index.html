@@ -278,33 +278,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#flows" class="md-nav__link">
-    Flows
-  </a>
-  
-    <nav class="md-nav" aria-label="Flows">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#user-shortening-a-url" class="md-nav__link">
-    User shortening a URL:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#user-following-a-shortened-link" class="md-nav__link">
-    User following a shortened link:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -631,6 +604,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-stack/" class="md-nav__link">
+        Tech Stack
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -678,33 +666,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#flows" class="md-nav__link">
-    Flows
-  </a>
-  
-    <nav class="md-nav" aria-label="Flows">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#user-shortening-a-url" class="md-nav__link">
-    User shortening a URL:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#user-following-a-shortened-link" class="md-nav__link">
-    User following a shortened link:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -746,27 +707,27 @@
 <li>Additional infrastructure includes a <strong>RabbitMQ</strong> instance for queueing up analytics data to be consumed by the analytics service.</li>
 </ul>
 <h3 id="diagram">Diagram</h3>
-<pre class="mermaid"><code>graph LR
-  A[Start] --&gt; B{Error?};
-  B --&gt;|Yes| C[Hmm...];
-  C --&gt; D[Debug];
-  D --&gt; B;
-  B ----&gt;|No| E[Yay!];</code></pre>
-<h3 id="flows">Flows</h3>
-<h4 id="user-shortening-a-url">User shortening a URL:</h4>
-<pre class="mermaid"><code>graph LR
-  A[Start] --&gt; B{Error?};
-  B --&gt;|Yes| C[Hmm...];
-  C --&gt; D[Debug];
-  D --&gt; B;
-  B ----&gt;|No| E[Yay!];</code></pre>
-<h4 id="user-following-a-shortened-link">User following a shortened link:</h4>
-<pre class="mermaid"><code>graph LR
-  A[Start] --&gt; B{Error?};
-  B --&gt;|Yes| C[Hmm...];
-  C --&gt; D[Debug];
-  D --&gt; B;
-  B ----&gt;|No| E[Yay!];</code></pre>
+<pre class="mermaid"><code>flowchart LR
+  WEB_APP(Web App) &lt;--&gt; LB_OIDC
+  WEB_APP &lt;--&gt; LB_API
+  LB_API((LB: API)) &lt;--&gt; API
+  Client_Request(Client Request) &lt;--&gt; LB_REDIRECTOR
+  LB_REDIRECTOR((LB: Redirector)) &lt;--&gt; REDIRECTOR
+  LB_UI((LB: UI)) &lt;--&gt; UI
+  LB_OIDC((LB: OIDC)) &lt;--&gt; OIDC
+  subgraph K8S
+    UI
+    API
+    REDIRECTOR
+    RABBITMQ --&gt; ANALYTICS
+    OIDC &lt;--&gt; API
+    REDIRECTOR --&gt; RABBITMQ
+  end
+  API &lt;--&gt; DB_Mongo[(Redirector Store - Mongo)]
+  API &lt;--&gt; DB_Postgres[(Shrtnr DB - Postgres)]
+  REDIRECTOR --&gt; DB_Mongo
+  ANALYTICS &lt;--&gt; DB_Postgres
+</code></pre>
 
 
 

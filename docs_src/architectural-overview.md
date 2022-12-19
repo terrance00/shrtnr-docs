@@ -20,34 +20,25 @@
 ### Diagram
 
 ```mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
+flowchart LR
+  WEB_APP(Web App) <--> LB_OIDC
+  WEB_APP <--> LB_API
+  LB_API((LB: API)) <--> API
+  Client_Request(Client Request) <--> LB_REDIRECTOR
+  LB_REDIRECTOR((LB: Redirector)) <--> REDIRECTOR
+  LB_UI((LB: UI)) <--> UI
+  LB_OIDC((LB: OIDC)) <--> OIDC
+  subgraph K8S
+    UI
+    API
+    REDIRECTOR
+    RABBITMQ --> ANALYTICS
+    OIDC <--> API
+    REDIRECTOR --> RABBITMQ
+  end
+  API <--> DB_Mongo[(Redirector Store - Mongo)]
+  API <--> DB_Postgres[(Shrtnr DB - Postgres)]
+  REDIRECTOR --> DB_Mongo
+  ANALYTICS <--> DB_Postgres
 
-### Flows
-
-#### User shortening a URL:
-
-```mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
-
-#### User following a shortened link:
-
-```mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
 ```
