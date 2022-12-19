@@ -13,3 +13,5 @@ In _short_, a URL shortening service geared towards helping you share your conte
 **Into**
 
  `https://shrtnr.io/a0A`
+
+_Find the source of the documentation [here](https://github.com/terrance00/shrtnr-docs)._

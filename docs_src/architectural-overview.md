@@ -23,6 +23,7 @@
 flowchart LR
   WEB_APP(Web App) <--> LB_OIDC
   WEB_APP <--> LB_API
+  WEB_APP <--> LB_UI
   LB_API((LB: API)) <--> API
   Client_Request(Client Request) <--> LB_REDIRECTOR
   LB_REDIRECTOR((LB: Redirector)) <--> REDIRECTOR
