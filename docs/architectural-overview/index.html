@@ -278,6 +278,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#fault-tolerance-and-redundancy" class="md-nav__link">
+    Fault Tolerance and Redundancy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling" class="md-nav__link">
+    Scaling
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -666,6 +680,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#fault-tolerance-and-redundancy" class="md-nav__link">
+    Fault Tolerance and Redundancy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling" class="md-nav__link">
+    Scaling
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -729,6 +757,25 @@
   REDIRECTOR --&gt; DB_Mongo
   ANALYTICS &lt;--&gt; DB_Postgres
 </code></pre>
+<h3 id="fault-tolerance-and-redundancy">Fault Tolerance and Redundancy</h3>
+<ul>
+<li>The data stores are always potential SPF's.</li>
+<li>For Mongo we can implement sharding as a method of scaling horizontally.</li>
+<li>
+<p>For both mongo and postgres we can use replication as a level of redundancy and fault tolerance.</p>
+</li>
+<li>
+<p>All of the services within the cluster, except for Rabbit, will be able to scale up and will initiate new instances upon any of them failing.</p>
+</li>
+</ul>
+<h3 id="scaling">Scaling</h3>
+<p>The following services can scale horizontally and can be set up to do so automatically:</p>
+<ul>
+<li>Shrtnr API</li>
+<li>Shrtnr OIDC</li>
+<li>Shrtnr Analytics</li>
+<li>Shrtnr Redirector</li>
+</ul>
 
 
 

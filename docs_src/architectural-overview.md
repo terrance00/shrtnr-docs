@@ -43,3 +43,20 @@ flowchart LR
   ANALYTICS <--> DB_Postgres
 
 ```
+
+### Fault Tolerance and Redundancy
+
+ - The data stores are always potential SPF's.
+ - For Mongo we can implement sharding as a method of scaling horizontally.
+ - For both mongo and postgres we can use replication as a level of redundancy and fault tolerance.
+
+ - All of the services within the cluster, except for Rabbit, will be able to scale up and will initiate new instances upon any of them failing.
+
+### Scaling
+
+The following services can scale horizontally and can be set up to do so automatically:
+
+ - Shrtnr API
+ - Shrtnr OIDC
+ - Shrtnr Analytics
+ - Shrtnr Redirector
