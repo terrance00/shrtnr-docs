@@ -710,6 +710,7 @@
 <pre class="mermaid"><code>flowchart LR
   WEB_APP(Web App) &lt;--&gt; LB_OIDC
   WEB_APP &lt;--&gt; LB_API
+  WEB_APP &lt;--&gt; LB_UI
   LB_API((LB: API)) &lt;--&gt; API
   Client_Request(Client Request) &lt;--&gt; LB_REDIRECTOR
   LB_REDIRECTOR((LB: Redirector)) &lt;--&gt; REDIRECTOR
